@@ -1,0 +1,15 @@
+schema_version: 1
+repository: supply-chain-network-optimization
+role: umbrella
+axis: application
+area: supply-chain-network
+status: active
+owner: jorsacademy
+projects:
+  - bilevel-supply-chain-pricing-optimization
+  - bioreactor-supply-chain-optimization-milp
+  - gurobi-supply-chain-network-optimization
+conventions:
+  provenance_records: true
+  reproducibility_expected: true
+  benchmark_assumptions_documented: true

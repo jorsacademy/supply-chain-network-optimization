@@ -1,0 +1,34 @@
+name: Event-driven supply-chain reoptimization
+
+on:
+  push:
+    paths:
+      - 'projects/event-driven-supply-chain-reoptimization/**'
+      - '.github/workflows/event-driven-supply-chain-reoptimization.yml'
+  pull_request:
+    paths:
+      - 'projects/event-driven-supply-chain-reoptimization/**'
+      - '.github/workflows/event-driven-supply-chain-reoptimization.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.12']
+
+    defaults:
+      run:
+        working-directory: projects/event-driven-supply-chain-reoptimization
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: projects/event-driven-supply-chain-reoptimization/pyproject.toml
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install -e ".[dev]"
+      - run: pytest -q
+      - run: python examples/run_demo.py

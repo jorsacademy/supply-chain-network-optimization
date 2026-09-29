@@ -10,8 +10,9 @@ This repository is the primary umbrella repository for this Jors Academy researc
 - [`bilevel-supply-chain-pricing-optimization`](projects/bilevel-supply-chain-pricing-optimization/)
 - [`bioreactor-supply-chain-optimization-milp`](projects/bioreactor-supply-chain-optimization-milp/)
 - [`gurobi-supply-chain-network-optimization`](projects/gurobi-supply-chain-network-optimization/)
+- [`event-driven-supply-chain-reoptimization`](projects/event-driven-supply-chain-reoptimization/) — native control-tower benchmark for disruption events and rolling reoptimization
 
-Each consolidated project keeps its own files and a `SOURCE_REPOSITORY.md` provenance record. The snapshot preserves the source repository's default-branch files at consolidation time; repository-level history and metadata remain separate from the snapshot.
+Consolidated source projects keep their own files and a `SOURCE_REPOSITORY.md` provenance record. The native event-driven reoptimization project is maintained directly in this umbrella repository. Source snapshots preserve the original default-branch files at consolidation time; repository-level history and metadata remain separate from the snapshots.
 <!-- portfolio-umbrella:end -->
 
 This repository contains a mixed-integer linear programming (MILP) model for a multi-echelon supply chain network. The model is a Python/Pyomo translation of the original GAMS formulation.
